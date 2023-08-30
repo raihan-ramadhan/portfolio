@@ -1,11 +1,9 @@
 "use server";
 
-import React from "react";
-import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/ContactFormEmail";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { render } from "@react-email/components";
+import nodemailer from "nodemailer";
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
@@ -13,26 +11,33 @@ export const sendEmail = async (formData: FormData) => {
 
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
-    return {
-      error: "Invalid sender email",
-    };
+    return { error: "Invalid sender email" };
   }
   if (!validateString(message, 5000)) {
-    return {
-      error: "Invalid message",
-    };
+    return { error: "Invalid message" };
   }
 
   let data;
 
   try {
-    data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: "raihanramadhan@gmail.com",
-      subject: "Message from contact form",
-      reply_to: senderEmail,
-      react: React.createElement(ContactFormEmail, { message, senderEmail }),
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.NODEMAILER_EMAIL,
+        pass: process.env.NODEMAILER_PW,
+      },
     });
+
+    const emailHtml = render(ContactFormEmail({ message, senderEmail }));
+
+    const options = {
+      from: process.env.NODEMAILER_EMAIL,
+      to: process.env.EMAIL_TO,
+      subject: "Message from contact form",
+      html: emailHtml,
+    };
+
+    data = await transporter.sendMail(options);
   } catch (error: unknown) {
     return { error: getErrorMessage(error) };
   }
