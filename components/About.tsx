@@ -24,7 +24,7 @@ export default function About() {
         <span className="font-medium">
           Network Computer Engineering Vocational High School
         </span>{" "}
-        . After graduating, I turned my{" "}
+        . After graduation, I turned my{" "}
         <span className="underline">hobby into a serious pursuit</span> while
         working at a <span className="italic">supermarket</span>.
       </p>

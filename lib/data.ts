@@ -41,6 +41,7 @@ export const projectsData = [
     ],
     imageUrl: notion,
     url: "https://notion-clone-han.vercel.app/",
+    repo: "https://github.com/raihan-ramadhan/notion-clone",
   },
   {
     title: "Airbnb Clone",
@@ -49,6 +50,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma", "Cloudinary"],
     imageUrl: airnbn,
     url: "https://airbnb-clone-sand-psi.vercel.app/",
+    repo: "https://github.com/raihan-ramadhan/airbnb-clone",
   },
   {
     title: "Personal Portfolio",
@@ -64,6 +66,7 @@ export const projectsData = [
     ],
     imageUrl: portfolio,
     url: "https://raihan-ramadhan.vercel.app",
+    repo: "https://github.com/raihan-ramadhan/portfolio",
   },
 ] as const;
 
