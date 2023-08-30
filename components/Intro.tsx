@@ -98,24 +98,25 @@ export default function Intro() {
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition delay-100" />
         </a>
+        <div className="flex gap-2">
+          <a
+            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 outline-none shrink-0"
+            href="https://www.linkedin.com/in/raihan-ramadhan-baab69227/"
+            target="_blank"
+          >
+            <span className="sr-only">Linkedin</span>
+            <BsLinkedin />
+          </a>
 
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 outline-none"
-          href="https://www.linkedin.com/in/raihan-ramadhan-baab69227/"
-          target="_blank"
-        >
-          <span className="sr-only">Linkedin</span>
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 outline-none"
-          href="https://github.com/raihan-ramadhan"
-          target="_blank"
-        >
-          <span className="sr-only">Github</span>
-          <FaGithubSquare />
-        </a>
+          <a
+            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 outline-none shrink-0"
+            href="https://github.com/raihan-ramadhan"
+            target="_blank"
+          >
+            <span className="sr-only">Github</span>
+            <FaGithubSquare />
+          </a>
+        </div>
       </motion.div>
     </section>
   );
