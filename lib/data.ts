@@ -61,7 +61,7 @@ export const projectsData = [
       "typescript",
       "Tailwind",
       "framer-motion",
-      "nodemailer",
+      "Nodemailer",
       "next-themes",
     ],
     imageUrl: portfolio,
@@ -94,5 +94,5 @@ export const skillsData = [
   "Photoshop",
   "Illustrator",
   "Figma",
-  "nodemailer",
+  "Nodemailer",
 ] as const;

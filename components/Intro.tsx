@@ -87,7 +87,7 @@ export default function Intro() {
           }}
         >
           Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-2 delay-100 transition" />
+          <BsArrowRight className="opacity-70 group-hover:translate-x-2 delay-100 transition-transform" />
         </Link>
 
         <a
@@ -96,11 +96,11 @@ export default function Intro() {
           download
         >
           Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition delay-100" />
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition-transform delay-100" />
         </a>
         <div className="flex gap-2">
           <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 outline-none shrink-0"
+            className="transition-colors-smooth bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 outline-none shrink-0"
             href="https://www.linkedin.com/in/raihan-ramadhan-baab69227/"
             target="_blank"
           >
@@ -109,7 +109,7 @@ export default function Intro() {
           </a>
 
           <a
-            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 outline-none shrink-0"
+            className="transition-colors-smooth bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 outline-none shrink-0"
             href="https://github.com/raihan-ramadhan"
             target="_blank"
           >
