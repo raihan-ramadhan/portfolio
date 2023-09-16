@@ -5,26 +5,29 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { IoOpenOutline, IoLogoGithub } from "react-icons/io5";
+import { GithubIcon, ArrowUpRightSquare } from "lucide-react";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number] & {
+  order: string;
+};
 
 export default function Project({
   title,
-  description,
   tags,
   imageUrl,
   url,
   repo,
+  features,
+  imageUrlMobile,
+  order,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
+    offset: ["0 1", "0.6 1"],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   return (
     <motion.div
       ref={ref}
@@ -32,36 +35,55 @@ export default function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20.5rem] hover:bg-gray-200 transition-[background] sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="leading-relaxed text-black dark:text-white">
-            {description}
-          </p>
-          <div className="flex gap-2 mt-3">
-            <a
-              href={repo}
-              target="_blank"
-              className="bg-white px-3 py-1 text-[0.7rem] tracking-wider text-black rounded-full flex items-center cursor-pointer gap-1 font-semibold hover:bg-gray-300 transition-colors"
-            >
-              <span>Repo</span>
-              <IoLogoGithub />
-            </a>
-            <a
-              href={url}
-              target="_blank"
-              className="bg-white px-3 py-1 text-[0.7rem] tracking-wider text-black rounded-full flex items-center cursor-pointer gap-1 font-semibold hover:bg-gray-300 transition-colors"
-            >
-              <span>Open </span>
-              <IoOpenOutline />
-            </a>
+      <section className="bg-gray-100 max-w-[60rem] border border-black/5 rounded-lg overflow-hidden relative sm:min-h-[22rem] lg:min-h-[28rem] hover:bg-gray-200 transition-[background] dark:text-white dark:bg-white/10 dark:hover:bg-white/20 h-full px-5 sm:px-10 py-5 sm:py-8 flex flex-col">
+        <div className="z-10 sm:max-w-[calc(100%)] lg:max-w-[calc(100%_-_400px)] flex-1 flex flex-col lg:group-even:ml-[400px]">
+          <div className="relative h-[200px] w-full mb-5 rounded-t-md overflow-hidden sm:hidden pointer-events-none drop-shadow-sm">
+            <Image
+              fill
+              src={imageUrlMobile}
+              alt={title}
+              className="object-cover object-left-top select-none pointer-events-none"
+              quality={50}
+            />
           </div>
-          <ul className="flex flex-wrap gap-2 sm:mt-auto mt-4">
+
+          <div className="flex flex-col sm:flex-row w-full items-center gap-2 sm:gap-3 shrink-0">
+            <h3 className="text-2xl font-bold drop-shadow-lg">{title}</h3>
+            <div className="flex gap-1">
+              <a
+                href={repo}
+                target="_blank"
+                className="bg-white px-3 py-0.5 text-[0.8rem] tracking-wider text-black rounded-full flex items-center cursor-pointer gap-1 font-semibold hover:bg-gray-300 transition-colors drop-shadow-md focus:outline-none focus:ring-1 ring-white ring-offset-2 ring-offset-gray-950"
+              >
+                <span>Repo</span>
+                <GithubIcon size={13} />
+              </a>
+              <a
+                href={url}
+                target="_blank"
+                className="bg-white px-3 py-0.5 text-[0.8rem] tracking-wider text-black rounded-full flex items-center cursor-pointer gap-1 font-semibold hover:bg-gray-300 transition-colors drop-shadow-md focus:outline-none focus:ring-1 ring-white ring-offset-2 ring-offset-gray-950"
+              >
+                <span>Open </span>
+                <ArrowUpRightSquare size={14} />
+              </a>
+            </div>
+          </div>
+
+          <div className="py-5 h-full flex-1">
+            <span className="text-xl"># Main Features : </span>
+            <ul className="list-disc list-outside ml-5">
+              {features.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <ul className="flex flex-wrap gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full"
+                className="bg-black px-2 py-1 text-[0.55rem] uppercase tracking-wider text-white rounded-full"
                 key={index}
               >
                 {tag}
@@ -72,22 +94,27 @@ export default function Project({
         <Link
           href={url}
           target="_blank"
-          className={`absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-md overflow-hidden shadow-2xl
-                      transition 
+          tabIndex={-1}
+          className={`z-0 absolute hidden sm:block -right-4 lg:-right-8 w-[350px] lg:w-[400px] rounded-t-md overflow-hidden group-hover:shadow-2xl transition blur-sm lg:blur-none opacity-20 lg:opacity-100 focus:outline-none pointer-events-none lg:pointer-events-auto
                       group-hover:scale-[1.04]
                       group-hover:-translate-x-3
                       group-hover:translate-y-3
-                      group-hover:-rotate-2
-
-                      group-even:group-hover:translate-x-3
-                      group-even:group-hover:translate-y-3
-                      group-even:group-hover:rotate-2
-
-                      group-even:right-[initial] group-even:-left-40`}
+                      group-hover:-rotate-3
+                     
+                      lg:group-even:group-hover:translate-x-3
+                      lg:group-even:group-hover:translate-y-3
+                      lg:group-even:group-hover:rotate-3
+                     
+                      lg:group-even:right-[initial] lg:group-even:-left-8`}
         >
-          <Image src={imageUrl} alt="Project I worked on" quality={95} />
+          <Image src={imageUrl} alt={title} quality={95} />
         </Link>
       </section>
+      <div className="my-4 sm:my-14 group-last:mb-0 block text-center pointer-events-none">
+        <span className="text-gray-700 dark:text-gray-300 text-sm">
+          {order}
+        </span>
+      </div>
     </motion.div>
   );
 }

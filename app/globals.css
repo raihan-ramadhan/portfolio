@@ -13,3 +13,31 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+html::-webkit-scrollbar {
+  @apply sm:w-2;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+  @apply sm:bg-gray-300;
+}
+html.dark::-webkit-scrollbar-track {
+  @apply sm:bg-gray-600;
+}
+
+/* Handle */
+html::-webkit-scrollbar-thumb {
+  @apply sm:rounded-full sm:bg-gray-500;
+}
+html.dark::-webkit-scrollbar-thumb {
+  @apply sm:bg-gray-400;
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+  @apply sm:rounded-full sm:bg-gray-600;
+}
+html.dark::-webkit-scrollbar-thumb:hover {
+  @apply sm:bg-gray-300;
+}

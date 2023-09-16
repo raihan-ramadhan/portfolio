@@ -3,12 +3,12 @@
 import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export default function Providers({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const elements = document.querySelectorAll(".transition-colors-smooth");
 
     elements.forEach((element: any) => {
-      element.classList.add("transition-colors", "duration-200");
+      element.classList.add("!transition-colors", "!duration-200");
     });
   }, []);
 

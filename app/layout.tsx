@@ -1,21 +1,40 @@
-import Header from "@/components/Header";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import { Toaster } from "react-hot-toast";
-import Footer from "@/components/Footer";
-import ThemeSwitch from "@/components/ThemeSwitch";
-import Favicon from "/public/favicon.ico";
-import { Providers } from "@/components/Providers";
 import "./globals.css";
+import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
+import ActiveSectionContextProvider from "@/context/active-section-context";
+
+import ThemeSwitch from "@/components/ThemeSwitch";
+import Providers from "@/components/Providers";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Raihan Ramadhan | Portfolio",
   description:
-    "I'm Raihan Ramadhan, a passionate self-taught fullstack developer with a strong interest in UI/UX ",
-  icons: [{ rel: "icon", url: Favicon.src }],
+    "Raihan Ramadhan Portfolio | Full Stack Developer and Front-End Engineer | Expertise in Web Development",
+  themeColor: "#f9fafb",
+  icons: [
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      url: "/favicon-16x16.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      url: "/favicon-32x32.png",
+    },
+    {
+      rel: "apple-touch-icon",
+      url: "/apple-touch-icon.png",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -26,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${inter.className} transition-colors-smooth bg-gray-50 text-gray-950  relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${inter.className} transition-colors-smooth bg-gray-50 text-gray-950  relative dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 custom-scrollarea`}
       >
         <Providers>
           <div className="transition-colors-smooth bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]" />
