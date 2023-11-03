@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Decoration } from "./Decoration";
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects", 0.1);
+  const { ref } = useSectionInView("Projects");
 
   return (
     <section
