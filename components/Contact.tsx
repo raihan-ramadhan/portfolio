@@ -17,7 +17,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="xl:min-h-screen"
+      className="xl:min-h-screen scroll-mt-10 xl:scroll-mt-0"
       initial={{
         opacity: 0,
       }}
