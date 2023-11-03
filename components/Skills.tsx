@@ -1,52 +1,26 @@
 "use client";
 
-import React from "react";
-import SectionHeading from "./SectionHeading";
-import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
-
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
+import { Decoration } from "./Decoration";
+import SectionHeading from "./SectionHeading";
+import SkillsListMobile from "./SkillsListMobile";
+import SkillsList from "./SkillsList";
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
 
   return (
-    <section
-      id="skills"
-      ref={ref}
-      className="max-w-[53rem] scroll-mt-28 text-center my-32 sm:my-48"
-    >
-      <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className="transition-colors-smooth bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
-        ))}
-      </ul>
+    <section id="skills" ref={ref} className="scroll-mt-10 sm:scroll-mt-5 ">
+      <div className="overflow-hidden flex flex-col w-full h-full gap-[15px] sm:gap-[25px] relative text-center pt-[50px] pb-[75px] px-4 selection:bg-blue selection:text-black sm:pt-[100px] sm:pb-[150px] sm:px-8 md:pt-[60px] md:pb-[90px] lg:pt-[80px] lg:pb-[120px] xl:pt-[120px] xl:pb-[160px] md:px-0">
+        <Decoration.andromeda className="absolute top-0 -right-6 w-[120px] h-[120px] stroke-cream mask-0-70-45deg opacity-40 sm:h-[150px] sm:w-[150px] sm:top-[15px] sm:right-0 md:w-[450px] md:h-[450px] md:-right-[50px] md:-top-[100px] lg:h-[700px] lg:w-[700px] lg:-top-[200] lg:-right-[120px] z-0" />
+        <SectionHeading>SKILLs</SectionHeading>
+
+        {/* Skills on tablet - dekstop */}
+        <SkillsList />
+
+        {/* Skills on mobile */}
+        <SkillsListMobile />
+      </div>
     </section>
   );
 }

@@ -31,6 +31,8 @@ export const links = [
 ] as const;
 
 type ProjectsData = Array<{
+  id: string;
+  year: string;
   title: string;
   features: Array<String>;
   tags: Array<SkillsData>;
@@ -42,6 +44,8 @@ type ProjectsData = Array<{
 
 export const projectsData: ProjectsData = [
   {
+    id: "0",
+    year: "2023",
     title: "Discord Clone",
     features: [
       "1:1 conversation and video calls between members",
@@ -71,6 +75,8 @@ export const projectsData: ProjectsData = [
     repo: "https://github.com/raihan-ramadhan/discord-clone",
   },
   {
+    id: "1",
+    year: "2023",
     title: "Notion Clone",
     features: [
       "CRUD document and share documents",
@@ -96,6 +102,8 @@ export const projectsData: ProjectsData = [
     repo: "https://github.com/raihan-ramadhan/notion-clone",
   },
   {
+    id: "2",
+    year: "2023",
     title: "Airbnb Clone",
     features: [
       "Booking / Reservation system",
@@ -121,6 +129,8 @@ export const projectsData: ProjectsData = [
     repo: "https://github.com/raihan-ramadhan/airbnb-clone",
   },
   {
+    id: "3",
+    year: "2023",
     title: "Messenger Clone",
     features: [
       "Full-stack web application Real-time messaging, utilized Pusher with feature like notif alert, online status, read receipt, etc.",
@@ -176,5 +186,42 @@ export const skillsData = [
   "Livekit",
   "Pusher",
 ] as const;
+export const developerSkills = [
+  "HTML",
+  "CSS",
+  "Javascript",
+  "Typescript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Git",
+  "Tailwind",
+  "Prisma",
+  "MongoDB",
+  "MySql",
+  "Redux",
+  "Zustand",
+  "React Query",
+  "Next-Auth",
+  "Clerk",
+  "Cloudinary",
+  "Uploadthing",
+  "Framer Motion",
+  "Nodemailer",
+  "Socket.io",
+  "Livekit",
+  "Pusher",
+] as const;
+
+export const designerSkills = [
+  "Figma",
+  "Adobe Photoshop",
+  "Adobe Illustrator",
+  "Wireframing",
+  "Prototyping",
+  "Social Media Post Design",
+];
 
 export type SkillsData = (typeof skillsData)[number];
+export type DesignerSkills = typeof designerSkills;
+export type DeveloperSkills = typeof developerSkills;

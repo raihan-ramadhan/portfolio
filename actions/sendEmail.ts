@@ -7,11 +7,15 @@ import nodemailer from "nodemailer";
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
+  const subject = formData.get("subject");
   const message = formData.get("message");
 
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
     return { error: "Invalid sender email" };
+  }
+  if (!validateString(subject, 500)) {
+    return { error: "Invalid subject" };
   }
   if (!validateString(message, 5000)) {
     return { error: "Invalid message" };
@@ -33,7 +37,7 @@ export const sendEmail = async (formData: FormData) => {
     const options = {
       from: process.env.NODEMAILER_EMAIL,
       to: process.env.EMAIL_TO,
-      subject: "Message from contact form",
+      subject,
       html: emailHtml,
     };
 

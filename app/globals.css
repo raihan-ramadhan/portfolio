@@ -6,38 +6,19 @@ html {
   --line-color: #e5e7eb;
 }
 
-html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
-}
-
 .borderBlack {
   @apply border border-black/10;
 }
 
-html::-webkit-scrollbar {
-  @apply sm:w-2;
-}
+@layer base {
+  :root {
+    --black: 0 0% 9%;
 
-/* Track */
-html::-webkit-scrollbar-track {
-  @apply sm:bg-gray-300;
-}
-html.dark::-webkit-scrollbar-track {
-  @apply sm:bg-gray-600;
-}
+    --cream: 26 100% 95%;
+    --cream-secondary: 26 7% 72%;
 
-/* Handle */
-html::-webkit-scrollbar-thumb {
-  @apply sm:rounded-full sm:bg-gray-500;
-}
-html.dark::-webkit-scrollbar-thumb {
-  @apply sm:bg-gray-400;
-}
-
-/* Handle on hover */
-html::-webkit-scrollbar-thumb:hover {
-  @apply sm:rounded-full sm:bg-gray-600;
-}
-html.dark::-webkit-scrollbar-thumb:hover {
-  @apply sm:bg-gray-300;
+    --blue: 224 92% 90%;
+    --blue-secondary: 223 19% 56%;
+    --blue-foreground: 225 17% 37%;
+  }
 }
