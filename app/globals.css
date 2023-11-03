@@ -6,10 +6,6 @@ html {
   --line-color: #e5e7eb;
 }
 
-.borderBlack {
-  @apply border border-black/10;
-}
-
 @layer base {
   :root {
     --black: 0 0% 9%;

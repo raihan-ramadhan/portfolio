@@ -26,7 +26,6 @@ export default function Header() {
     if (scrolled === true && window.scrollY <= 150) {
       setScrolled(false);
     }
-    console.log("TEST 3");
   }, [scrolled]);
 
   useEffect(() => {

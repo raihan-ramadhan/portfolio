@@ -111,7 +111,7 @@ export default function Contact() {
 
           <form
             ref={formRef}
-            className="col-start-1 col-end-13 xl:col-start-1 xl:col-end-6 flex flex-col mx-auto gap-[10px] bg-cream-secondary p-5 rounded-[15px] max-w-[408px] h-[440px] xl:h-[520px] mi xl:max-w-[unset] w-full md:px-[30px] md:py-[20px] lg:px-[40px] lg:py-[30px] z-10 shrink"
+            className="col-start-1 col-end-13 xl:col-start-1 xl:col-end-6 flex flex-col mx-auto gap-[10px] bg-cream p-5 rounded-[15px] max-w-[408px] h-[440px] xl:h-[520px] xl:max-w-[unset] w-full md:px-[30px] md:py-[20px] lg:px-[40px] lg:py-[30px] z-10 shrink"
             action={async (formData) => {
               const { data, error } = await sendEmail(formData);
 
