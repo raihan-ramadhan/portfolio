@@ -43,39 +43,39 @@ type ProjectsData = Array<{
 }>;
 
 export const projectsData: ProjectsData = [
+  // {
+  //   id: "0",
+  //   year: "2023",
+  //   title: "Discord Clone",
+  //   features: [
+  //     "1:1 conversation and video calls between members",
+  //     "Delete & Edit messages in real time for all users",
+  //     "Send attachments (image & pdf) as messages",
+  //     "Infinite loading for messages with tanstack/query",
+  //     "Unique invite link generation for invite into server",
+  //     "Full responsivity in all screen and Light / Dark mode",
+  //     "User authentication with Clerk, and database stored in Planetscale (MySQL).",
+  //   ],
+  //   tags: [
+  //     "Next.js",
+  //     "TypeScript",
+  //     "Tailwind",
+  //     "Prisma",
+  //     "Clerk",
+  //     "Uploadthing",
+  //     "Socket.io",
+  //     "Livekit",
+  //     "PlanetScale (SQL)",
+  //     "Tanstack Query",
+  //     "Zustand",
+  //   ],
+  //   imageUrl: discord,
+  //   imageUrlMobile: discordMobile,
+  //   url: "https://discord-clone-alpha-two.vercel.app/",
+  //   repo: "https://github.com/raihan-ramadhan/discord-clone",
+  // },
   {
     id: "0",
-    year: "2023",
-    title: "Discord Clone",
-    features: [
-      "1:1 conversation and video calls between members",
-      "Delete & Edit messages in real time for all users",
-      "Send attachments (image & pdf) as messages",
-      "Infinite loading for messages with tanstack/query",
-      "Unique invite link generation for invite into server",
-      "Full responsivity in all screen and Light / Dark mode",
-      "User authentication with Clerk, and database stored in Planetscale (MySQL).",
-    ],
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "Prisma",
-      "Clerk",
-      "Uploadthing",
-      "Socket.io",
-      "Livekit",
-      "PlanetScale (SQL)",
-      "Tanstack Query",
-      "Zustand",
-    ],
-    imageUrl: discord,
-    imageUrlMobile: discordMobile,
-    url: "https://discord-clone-alpha-two.vercel.app/",
-    repo: "https://github.com/raihan-ramadhan/discord-clone",
-  },
-  {
-    id: "1",
     year: "2023",
     title: "Notion Clone",
     features: [
@@ -102,7 +102,7 @@ export const projectsData: ProjectsData = [
     repo: "https://github.com/raihan-ramadhan/notion-clone",
   },
   {
-    id: "2",
+    id: "1",
     year: "2023",
     title: "Airbnb Clone",
     features: [
@@ -129,7 +129,7 @@ export const projectsData: ProjectsData = [
     repo: "https://github.com/raihan-ramadhan/airbnb-clone",
   },
   {
-    id: "3",
+    id: "2",
     year: "2023",
     title: "Messenger Clone",
     features: [
