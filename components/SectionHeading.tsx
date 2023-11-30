@@ -13,7 +13,7 @@ export default function SectionHeading({
   return (
     <h2
       className={cn(
-        "text-[32px] font-heading font-bold sm:text-[38px] md:text-[54px] lg:text-[62px] xl:text-[72px]",
+        "text-[32px] font-heading font-bold sm:text-[38px] md:text-[54px] lg:text-[62px] xl:text-[72px] m-0",
         className
       )}
     >

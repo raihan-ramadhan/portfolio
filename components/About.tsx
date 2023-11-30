@@ -15,7 +15,7 @@ export default function About() {
         className="w-full flex flex-col justify-center items-center scroll-mt-28 gap-[15px] sm:gap-[25px] xl:gap-[50px] sm:pt-[100px] sm:pb-[150px] xl:pt-[unset] xl:pb-[unset] xl:min-h-[inherit]"
         id="about"
       >
-        <SectionHeading>ABOUT Me</SectionHeading>
+        <SectionHeading>ABOUT ME</SectionHeading>
         <div className="w-full grid grid-cols-[repeat(12,minmax(0,1fr))] gap-6 px-4 sm:px-8 md:px-6 lg:px-[200px] xl:px-[unset] xl:grid-cols-[repeat(12,72px)] xl:justify-center">
           <div className="col-start-1 col-end-[-1] md:col-start-2 md:col-end-[-2] lg:col-start-1 lg:col-end-[-1]">
             <div className="w-full flex flex-col gap-[30px] text-justify text-[14px] font-normal leading-6 md:text-[15px] lg:text-base xl:text-[20px]">

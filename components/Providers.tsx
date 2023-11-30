@@ -1,14 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    const elements = document.querySelectorAll(".transition-colors-smooth");
+    document.documentElement.classList.add("scroll-smooth");
 
-    elements.forEach((element: any) => {
-      element.classList.add("!transition-colors", "!duration-200");
-    });
+    return () => {
+      document.documentElement.classList.remove("scroll-smooth");
+    };
   }, []);
 
   return <>{children}</>;

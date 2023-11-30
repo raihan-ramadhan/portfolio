@@ -6,6 +6,7 @@ import "./globals.css";
 import { Viewport } from "next";
 
 import { Space_Mono, Unbounded } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const SpaceMono = Space_Mono({
   subsets: ["latin"],
@@ -55,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${SpaceMono.variable} ${UnboundedFont.variable} !scroll-smooth m-0 p-0`}
+      className={`${SpaceMono.variable} ${UnboundedFont.variable} m-0 p-0`}
     >
       <body className="relative font-default text-blue bg-black">
         <Providers>
@@ -64,6 +65,7 @@ export default function RootLayout({
             <Toaster position="top-right" toastOptions={{ duration: 5000 }} />
           </ActiveSectionContextProvider>
         </Providers>
+        <Footer />
       </body>
     </html>
   );

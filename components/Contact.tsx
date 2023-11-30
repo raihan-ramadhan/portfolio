@@ -38,9 +38,7 @@ export default function Contact() {
         <div className="gap-6 grid grid-cols-[repeat(12,minmax(0,1fr))] xl:grid-cols-[repeat(12,72px)] xl:justify-center">
           <div className="col-start-1 col-end-13 flex flex-col w-full justify-between xl:col-start-6 xl:col-end-13 text-center xl:text-left xl:pl-[72px] xl:order-last selection:text-black selection:bg-blue h-fit xl:h-full">
             <div>
-              <SectionHeading>
-                Let’s <br /> Collaborate
-              </SectionHeading>
+              <SectionHeading>Let’s Talk</SectionHeading>
 
               <p className="text-blue-secondary text-[14px] sm:text-[16px]">
                 Contact me directly at{" "}

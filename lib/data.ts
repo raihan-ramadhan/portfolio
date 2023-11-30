@@ -1,12 +1,3 @@
-import airnbn from "@/public/airbnb.png";
-import airnbnMobile from "@/public/airbnb-mobile.png";
-import notion from "@/public/notion.png";
-import notionMobile from "@/public/notion-mobile.png";
-import discord from "@/public/discord.png";
-import discordMobile from "@/public/discord-mobile.png";
-import messenger from "@/public/messenger.png";
-import messengerMobile from "@/public/messenger-mobile.png";
-
 export const links = [
   {
     name: "Home",
@@ -35,11 +26,13 @@ type ProjectsData = Array<{
   year: string;
   title: string;
   features: Array<String>;
-  tags: Array<SkillsData>;
+  tech: Array<SkillsData>;
   imageUrl: any;
   imageUrlMobile: any;
   url: string;
   repo: string;
+  category: "Clone App" | "Landing Page" | "Design";
+  carouselItems: Array<{ label: string; url: string }>;
 }>;
 
 export const projectsData: ProjectsData = [
@@ -56,7 +49,7 @@ export const projectsData: ProjectsData = [
   //     "Full responsivity in all screen and Light / Dark mode",
   //     "User authentication with Clerk, and database stored in Planetscale (MySQL).",
   //   ],
-  //   tags: [
+  //   tech: [
   //     "Next.js",
   //     "TypeScript",
   //     "Tailwind",
@@ -78,6 +71,7 @@ export const projectsData: ProjectsData = [
     id: "0",
     year: "2023",
     title: "Notion Clone",
+    category: "Clone App",
     features: [
       "CRUD document and share documents",
       "Beautiful editor powered by Tiptap, with features like suggestion, paragraph, heading, todo-list, etc.",
@@ -85,7 +79,7 @@ export const projectsData: ProjectsData = [
       "Full responsivity in all screen and Light / Dark mode (depend on system)",
       "User authentication with Clerk, and documents data stored in mongoDB atlas.",
     ],
-    tags: [
+    tech: [
       "Next.js",
       "TypeScript",
       "Tailwind",
@@ -96,15 +90,36 @@ export const projectsData: ProjectsData = [
       "Tanstack Query",
       "Zustand",
     ],
-    imageUrl: notion,
-    imageUrlMobile: notionMobile,
-    url: "https://notion-clone-han.vercel.app/",
+    imageUrl:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835254/portfolio/notion-banner.jpg",
+    imageUrlMobile:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835255/portfolio/notion-mobile-banner.jpg",
+    url: "https://notion-clone-han.vercel.app",
     repo: "https://github.com/raihan-ramadhan/notion-clone",
+    carouselItems: [
+      {
+        label: "Rich Text Editor (WYSIWYG) by tiptap",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835250/portfolio/notion-1.jpg",
+      },
+      {
+        label: "Full Responsive",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835255/portfolio/notion-2.jpg",
+      },
+      {
+        label: "Beautiful UI",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835253/portfolio/notion-3.jpg",
+      },
+      {
+        label: "Dark Mode",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835254/portfolio/notion-4.jpg",
+      },
+    ],
   },
   {
     id: "1",
     year: "2023",
     title: "Airbnb Clone",
+    category: "Clone App",
     features: [
       "Booking / Reservation system",
       "Guest reservation cancellation",
@@ -113,7 +128,7 @@ export const projectsData: ProjectsData = [
       "Full responsivity in all screen and beautiful design with tailwind and react components",
       "Google & Github authentication with Next-Auth, while all data users, properties and reservations is stored in mongoDB atlas",
     ],
-    tags: [
+    tech: [
       "Next.js",
       "TypeScript",
       "Tailwind",
@@ -123,15 +138,32 @@ export const projectsData: ProjectsData = [
       "Zustand",
       "Next-Auth",
     ],
-    imageUrl: airnbn,
-    imageUrlMobile: airnbnMobile,
-    url: "https://airbnb-clone-sand-psi.vercel.app/",
+    imageUrl:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835251/portfolio/airbnb-banner.jpg",
+    imageUrlMobile:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835246/portfolio/airbnb-mobile-banner.jpg",
+    url: "https://airbnb-clone-han.vercel.app",
     repo: "https://github.com/raihan-ramadhan/airbnb-clone",
+    carouselItems: [
+      {
+        label: "Full Responsive",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835250/portfolio/airbnb-1.jpg",
+      },
+      {
+        label: "Beautiful Components",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835247/portfolio/airbnb-2.jpg",
+      },
+      {
+        label: "Beautiful Components",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835246/portfolio/airbnb-3.jpg",
+      },
+    ],
   },
   {
     id: "2",
     year: "2023",
     title: "Messenger Clone",
+    category: "Clone App",
     features: [
       "Full-stack web application Real-time messaging, utilized Pusher with feature like notif alert, online status, read receipt, etc.",
       "Group chats and 1:1 conversation",
@@ -139,7 +171,7 @@ export const projectsData: ProjectsData = [
       "Client form validation and handling using react-hook-form",
       "Google & Github authentication with Next-Auth, while all data users, properties and reservations is handled by mongoDB atlas",
     ],
-    tags: [
+    tech: [
       "Next.js",
       "TypeScript",
       "Tailwind",
@@ -150,10 +182,26 @@ export const projectsData: ProjectsData = [
       "Pusher",
       "Next-Auth",
     ],
-    imageUrl: messenger,
-    imageUrlMobile: messengerMobile,
-    url: "https://messenger-clone-eight-virid.vercel.app/",
+    imageUrl:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835248/portfolio/messenger-banner.jpg",
+    imageUrlMobile:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835248/portfolio/messenger-mobile-banner.jpg",
+    url: "https://messenger-clone-han.vercel.app",
     repo: "https://github.com/raihan-ramadhan/messenger-clone",
+    carouselItems: [
+      {
+        label: "Realtime Chat with Pusher",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835246/portfolio/messenger-1.jpg",
+      },
+      {
+        label: "Group and Personal Chat",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835248/portfolio/messenger-2.jpg",
+      },
+      {
+        label: "Full Responsive",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835250/portfolio/messenger-3.jpg",
+      },
+    ],
   },
 ];
 
@@ -225,3 +273,6 @@ export const designerSkills = [
 export type SkillsData = (typeof skillsData)[number];
 export type DesignerSkills = typeof designerSkills;
 export type DeveloperSkills = typeof developerSkills;
+
+export const cvUrl =
+  "https://drive.google.com/file/d/1RfhIGOfEU5IGx466CdsYGztb8Hs7ZGwP/view";
