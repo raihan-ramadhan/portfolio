@@ -42,7 +42,7 @@ const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
   }, []);
 
   return (
-    <div className="w-full pl-4 sm:pl-8 md:px-6 lg:px-[200px] xl:px-0 xl:mx-auto xl:max-w-[1128px]">
+    <section className="w-full pl-4 sm:pl-8 md:px-6 lg:px-[200px] xl:px-0 xl:mx-auto xl:max-w-[1128px]">
       <ResponsiveCarousel
         showIndicators={false}
         showStatus={false}
@@ -72,7 +72,7 @@ const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
           </div>
         ))}
       </ResponsiveCarousel>
-    </div>
+    </section>
   );
 };
 

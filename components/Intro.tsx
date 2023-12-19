@@ -6,7 +6,7 @@ import { motion, Variants } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { Icons } from "./Icons";
-import { Decoration } from "./Decoration";
+import { Decoration, MotionDecoration } from "./Decoration";
 
 const refVariants = {
   initial: {
@@ -132,24 +132,18 @@ export default function Intro() {
       </div>
 
       {/* Background Decorations */}
-      <motion.div
-        variants={variants4}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        className="absolute -left-[15px] top-[calc(100vh/7)] md:left-[85px] lg:left-[20px] lg:top-[20px] xl:top-[calc(100vh/12)] xl:left-[calc(100vw/20)]"
-      >
-        <Decoration.andromeda className="stroke-black w-[50px] h-[50px] lg:h-[85px] lg:w-[85px] xl:h-[100px] xl:w-[100px]" />
-      </motion.div>
-      <motion.div
-        variants={variants4}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        className="absolute -right-[35px] -bottom-[15px] sm:right-[15px] md:bottom-[20px] md:right-[50px] lg:-right-[20px] lg:-bottom-[50px] xl:bottom-[calc(100vh/25)] xl:right-[calc(100vw/20)]"
-      >
-        <Decoration.andromeda className="stroke-black w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] md:w-[130px] md:h-[130px] lg:w-[200px] lg:h-[200px] xl:w-[220px] xl:h-[220px]" />
-      </motion.div>
+      <MotionDecoration
+        decorStyles="stroke-black w-[50px] h-[50px] lg:h-[85px] lg:w-[85px] xl:h-[100px] xl:w-[100px]"
+        motionStyles="absolute -left-[15px] top-[calc(100vh/7)] md:left-[85px] lg:left-[20px] lg:top-[20px] xl:top-[calc(100vh/12)] xl:left-[calc(100vw/20)]"
+        variant="andromeda"
+        motionVariants={variants4}
+      />
+      <MotionDecoration
+        decorStyles="stroke-black w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] md:w-[130px] md:h-[130px] lg:w-[200px] lg:h-[200px] xl:w-[220px] xl:h-[220px]"
+        motionStyles="absolute -right-[35px] -bottom-[15px] sm:right-[15px] md:bottom-[20px] md:right-[50px] lg:-right-[20px] lg:-bottom-[50px] xl:bottom-[calc(100vh/25)] xl:right-[calc(100vw/20)]"
+        variant="andromeda"
+        motionVariants={variants4}
+      />
     </section>
   );
 }

@@ -1,6 +1,10 @@
-import { cn } from "@/lib/utils";
+"use client";
 
-export const Decoration = {
+import { cn } from "@/lib/utils";
+import { HTMLProps, InputHTMLAttributes, createElement } from "react";
+import { Variants, motion } from "framer-motion";
+
+const Decorations = {
   andromeda: ({ className, ...props }: React.SVGProps<SVGSVGElement>) => (
     <svg
       {...props}
@@ -125,4 +129,39 @@ export const Decoration = {
       />
     </svg>
   ),
+};
+
+type DecorationVariant = keyof typeof Decorations;
+
+export const Decoration = ({
+  variant,
+  ...rest
+}: React.SVGProps<SVGSVGElement> & { variant: DecorationVariant }) => {
+  return createElement(Decorations[variant], { ...rest });
+};
+
+type MotionDecorationprops = {
+  motionVariants: Variants;
+  variant: DecorationVariant;
+  motionStyles: string;
+  decorStyles: string;
+};
+
+export const MotionDecoration: React.FC<MotionDecorationprops> = ({
+  motionVariants,
+  variant,
+  motionStyles,
+  decorStyles,
+}) => {
+  return (
+    <motion.div
+      variants={motionVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      className={motionStyles}
+    >
+      <Decoration variant={variant} className={decorStyles} />
+    </motion.div>
+  );
 };

@@ -32,8 +32,14 @@ export default function Contact() {
       }}
     >
       <div className="relative overflow-hidden w-full py-[50px] px-4 sm:px-8 md:px-6 lg:px-[200px] xl:px-[unset] flex items-center justify-center min-h-[inherit]">
-        <Decoration.asterisk className="w-20 h-20 absolute top-1 right-4 stroke-cream mask-0-80-45deg opacity-40 sm:right-[50px] md:right-[40px] md:top-[40px] md:w-[120px] md:h-[120px]" />
-        <Decoration.reverseItalicEllipse className="w-[170px] h-[220px] absolute -bottom-[5px] -left-[60px] stroke-cream -mask-0-60-45deg opacity-60 sm:w-[230px] sm:h-[300px] sm:bottom-[5px] sm:-left-[100px] md:w-[450px] md:h-[600px] md:-bottom-[25px] md:-mask-0-70-45deg lg:-mask-0-50-45deg xl:-mask-0-40-45deg md:-left-[130px] xl:bottom-[unset] xl:-top-[200px] xl:-left-[150px]" />
+        <Decoration
+          variant="asterisk"
+          className="w-20 h-20 absolute top-1 right-4 stroke-cream mask-0-80-45deg opacity-40 sm:right-[50px] md:right-[40px] md:top-[40px] md:w-[120px] md:h-[120px]"
+        />
+        <Decoration
+          variant="reverseItalicEllipse"
+          className="w-[170px] h-[220px] absolute -bottom-[5px] -left-[60px] stroke-cream -mask-0-60-45deg opacity-60 sm:w-[230px] sm:h-[300px] sm:bottom-[5px] sm:-left-[100px] md:w-[450px] md:h-[600px] md:-bottom-[25px] md:-mask-0-70-45deg lg:-mask-0-50-45deg xl:-mask-0-40-45deg md:-left-[130px] xl:bottom-[unset] xl:-top-[200px] xl:-left-[150px]"
+        />
 
         <div className="gap-6 grid grid-cols-[repeat(12,minmax(0,1fr))] xl:grid-cols-[repeat(12,72px)] xl:justify-center">
           <div className="col-start-1 col-end-13 flex flex-col w-full justify-between xl:col-start-6 xl:col-end-13 text-center xl:text-left xl:pl-[72px] xl:order-last selection:text-black selection:bg-blue h-fit xl:h-full">

@@ -59,7 +59,10 @@ export default function About() {
         </div>
       </section>
       <div className="absolute right-[15px] top-[10px] md:-right-[25px] md:-top-[35px] lg:-right-[50px] lg:-top-[50px] xl:-right-[100px] xl:-top-[100px] mask-0-80-45deg md:mask-0-60-45deg">
-        <Decoration.asterisk className="stroke-cream w-20 h-20 sm:w-[120px] sm:h-[120px] md:w-[260px] md:h-[260px] lg:w-[350px] lg:h-[350px] xl:w-[500px] xl:h-[500px] opacity-40" />
+        <Decoration
+          variant="asterisk"
+          className="stroke-cream w-20 h-20 sm:w-[120px] sm:h-[120px] md:w-[260px] md:h-[260px] lg:w-[350px] lg:h-[350px] xl:w-[500px] xl:h-[500px] opacity-40"
+        />
       </div>
     </div>
   );

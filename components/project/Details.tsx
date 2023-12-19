@@ -1,9 +1,9 @@
-import { SkillsData } from "@/lib/data";
+import { DeveloperSkill } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 interface ProjectDetailProps {
   year: string;
-  tech: Array<SkillsData>;
+  tech: Array<DeveloperSkill>;
   link: string;
   repo: string;
 }

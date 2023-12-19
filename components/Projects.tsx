@@ -92,7 +92,10 @@ export default function Projects() {
       id="projects"
       className="relative text-center pt-[100px] pb-[100px] md:pt-[60px] md:pb-[90px] lg:pt-[80px] lg:pb-[120px] selection:text-black selection:bg-blue overflow-hidden scroll-mt-[100px] flex flex-col gap-[15px] sm:gap-[25px] lg:gap-[50px] w-full"
     >
-      <Decoration.reverseItalicEllipse className="stroke-cream absolute -left-[100px] -top-[100px] w-[220px] h-[280px] md:w-[350px] md:h-[450px] xl:w-[450px] xl:h-[550px] opacity-40 -mask-0-50-45deg" />
+      <Decoration
+        variant="reverseItalicEllipse"
+        className="stroke-cream absolute -left-[100px] -top-[100px] w-[220px] h-[280px] md:w-[350px] md:h-[450px] xl:w-[450px] xl:h-[550px] opacity-40 -mask-0-50-45deg"
+      />
       <SectionHeading>PROJECTS</SectionHeading>
       <div className="w-full grid grid-cols-[repeat(12,minmax(0,1fr))] gap-6 px-4 sm:px-8 md:px-6 lg:px-[200px] xl:px-[unset] xl:grid-cols-[repeat(12,72px)] xl:justify-center">
         <div className="col-start-1 col-end-[-1] md:col-start-2 md:col-end-[-2] lg:col-start-1 lg:col-end-[-1]">

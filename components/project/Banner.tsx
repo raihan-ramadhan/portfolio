@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionHeading from "../SectionHeading";
+import { MotionDecoration } from "../Decoration";
 
 interface BannerProps {
   title: string;
@@ -7,6 +8,18 @@ interface BannerProps {
   imageUrlMobile: string;
   link: string;
 }
+
+const Variants = {
+  initial: {
+    opacity: 0,
+    scale: 0.75,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.35, delay: 0.6 },
+  },
+};
 
 const Banner: React.FC<BannerProps> = ({
   title,

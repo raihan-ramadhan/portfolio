@@ -26,49 +26,119 @@ type ProjectsData = Array<{
   year: string;
   title: string;
   features: Array<String>;
-  tech: Array<SkillsData>;
+  tech: Array<DeveloperSkill>;
   imageUrl: any;
   imageUrlMobile: any;
   url: string;
   repo: string;
-  category: "Clone App" | "Landing Page" | "Design";
+  category: "Clone App" | "Landing Page" | "Design" | "Web App";
   carouselItems: Array<{ label: string; url: string }>;
 }>;
 
 export const projectsData: ProjectsData = [
-  // {
-  //   id: "0",
-  //   year: "2023",
-  //   title: "Discord Clone",
-  //   features: [
-  //     "1:1 conversation and video calls between members",
-  //     "Delete & Edit messages in real time for all users",
-  //     "Send attachments (image & pdf) as messages",
-  //     "Infinite loading for messages with tanstack/query",
-  //     "Unique invite link generation for invite into server",
-  //     "Full responsivity in all screen and Light / Dark mode",
-  //     "User authentication with Clerk, and database stored in Planetscale (MySQL).",
-  //   ],
-  //   tech: [
-  //     "Next.js",
-  //     "TypeScript",
-  //     "Tailwind",
-  //     "Prisma",
-  //     "Clerk",
-  //     "Uploadthing",
-  //     "Socket.io",
-  //     "Livekit",
-  //     "PlanetScale (SQL)",
-  //     "Tanstack Query",
-  //     "Zustand",
-  //   ],
-  //   imageUrl: discord,
-  //   imageUrlMobile: discordMobile,
-  //   url: "https://discord-clone-alpha-two.vercel.app/",
-  //   repo: "https://github.com/raihan-ramadhan/discord-clone",
-  // },
   {
     id: "0",
+    year: "2023",
+    title: "DashboardX",
+    category: "Web App",
+    features: [
+      "Great ui and ux with Material UI component and icon",
+      "Full responsivity and mobile UI",
+      "State management with redux toolkit and query request with RTK query",
+      "ODM using Mongoose for backend and MVC pattern with express as main framework for backend",
+    ],
+    tech: [
+      "React",
+      "Typescript",
+      "Nivo Chart",
+      "Material UI",
+      "Redux Toolkit",
+      "RTK Query",
+      "Javascript",
+      "Node.js",
+      "Express Js",
+      "Mongoose",
+      "Atlas (Mongodb)",
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1702708092/portfolio/dashboard-banner.jpg",
+    imageUrlMobile:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1702707444/portfolio/dashboardx-mobile-banner.jpg",
+    url: "https://admin-dahsboard-ecommerce.vercel.app",
+    repo: "https://github.com/raihan-ramadhan/admin-dahsboard-ecommerce",
+    carouselItems: [
+      {
+        label: "Beautiful UI with MUI",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1702724731/portfolio/dashboardx-1.jpg",
+      },
+      {
+        label: "Full Responsive",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1702724732/portfolio/dashboardx-2.jpg",
+      },
+      {
+        label: "Dark Mode",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1702724731/portfolio/dashboardx-3.jpg",
+      },
+    ],
+  },
+  {
+    id: "1",
+    year: "2023",
+    title: "Discord Clone",
+    category: "Clone App",
+    features: [
+      "1:1 conversation and video calls between members",
+      "Delete & Edit messages in real time for all users",
+      "Send attachments (image & pdf) as messages",
+      "Infinite loading for messages with tanstack/query",
+      "Unique invite link generation for invite into server",
+      "Full responsivity in all screen and Light / Dark mode",
+      "User authentication with Clerk, and database stored in Planetscale (MySQL).",
+    ],
+    tech: [
+      "Next.js",
+      "Typescript",
+      "Tailwind",
+      "Prisma",
+      "Clerk",
+      "Uploadthing",
+      "Socket.io",
+      "Livekit",
+      "PlanetScale (MySQL)",
+      "React Query",
+      "Zustand",
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1702708091/portfolio/discord-banner.jpg",
+    imageUrlMobile:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1702707256/portfolio/discord-mobile-banner.jpg",
+    url: "https://discord-clone-alpha-two.vercel.app",
+    repo: "https://github.com/raihan-ramadhan/discord-clone",
+    carouselItems: [
+      {
+        label: "Realtime Chat with Socket.io",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1702727714/portfolio/discord-1.jpg",
+      },
+      {
+        label: "Send attachments as messages using UploadThing",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1702727714/portfolio/discord-2.jpg",
+      },
+      {
+        label: "1:1 chat and video call between user",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1702727715/portfolio/discord-3.jpg",
+      },
+      {
+        label: "Member management for admin and moderator",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1702727714/portfolio/discord-4.jpg",
+      },
+      {
+        label: "White Mode",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1702727847/portfolio/discord-5.jpg",
+      },
+    ],
+  },
+  {
+    id: "2",
     year: "2023",
     title: "Notion Clone",
     category: "Clone App",
@@ -81,13 +151,13 @@ export const projectsData: ProjectsData = [
     ],
     tech: [
       "Next.js",
-      "TypeScript",
+      "Typescript",
       "Tailwind",
       "Prisma",
       "Clerk",
       "Cloudinary",
-      "MongoDB (NO-SQL)",
-      "Tanstack Query",
+      "Atlas (Mongodb)",
+      "React Query",
       "Zustand",
     ],
     imageUrl:
@@ -116,7 +186,7 @@ export const projectsData: ProjectsData = [
     ],
   },
   {
-    id: "1",
+    id: "3",
     year: "2023",
     title: "Airbnb Clone",
     category: "Clone App",
@@ -130,11 +200,11 @@ export const projectsData: ProjectsData = [
     ],
     tech: [
       "Next.js",
-      "TypeScript",
+      "Typescript",
       "Tailwind",
       "Prisma",
       "Cloudinary",
-      "MongoDB (NO-SQL)",
+      "Atlas (Mongodb)",
       "Zustand",
       "Next-Auth",
     ],
@@ -160,7 +230,7 @@ export const projectsData: ProjectsData = [
     ],
   },
   {
-    id: "2",
+    id: "4",
     year: "2023",
     title: "Messenger Clone",
     category: "Clone App",
@@ -173,11 +243,11 @@ export const projectsData: ProjectsData = [
     ],
     tech: [
       "Next.js",
-      "TypeScript",
+      "Typescript",
       "Tailwind",
       "Prisma",
       "Cloudinary",
-      "MongoDB (NO-SQL)",
+      "Atlas (Mongodb)",
       "Zustand",
       "Pusher",
       "Next-Auth",
@@ -205,35 +275,6 @@ export const projectsData: ProjectsData = [
   },
 ];
 
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB (NO-SQL)",
-  "PlanetScale (SQL)",
-  "Redux",
-  "Zustand",
-  "Tanstack Query",
-  "Next-Auth",
-  "Clerk",
-  "Cloudinary",
-  "Uploadthing",
-  "Framer Motion",
-  "Photoshop",
-  "Illustrator",
-  "Figma",
-  "Nodemailer",
-  "Socket.io",
-  "Livekit",
-  "Pusher",
-] as const;
 export const developerSkills = [
   "HTML",
   "CSS",
@@ -242,13 +283,18 @@ export const developerSkills = [
   "React",
   "Next.js",
   "Node.js",
+  "Express Js",
   "Git",
   "Tailwind",
+  "Material UI",
+  "Nivo Chart",
   "Prisma",
-  "MongoDB",
-  "MySql",
-  "Redux",
+  "Mongoose",
+  "Atlas (Mongodb)",
+  "PlanetScale (MySQL)",
+  "Redux Toolkit",
   "Zustand",
+  "RTK Query",
   "React Query",
   "Next-Auth",
   "Clerk",
@@ -261,18 +307,8 @@ export const developerSkills = [
   "Pusher",
 ] as const;
 
-export const designerSkills = [
-  "Figma",
-  "Adobe Photoshop",
-  "Adobe Illustrator",
-  "Wireframing",
-  "Prototyping",
-  "Social Media Post Design",
-];
+export const designerSkills = ["Figma", "Adobe Photoshop", "Adobe Illustrator"];
 
-export type SkillsData = (typeof skillsData)[number];
 export type DesignerSkills = typeof designerSkills;
 export type DeveloperSkills = typeof developerSkills;
-
-export const cvUrl =
-  "https://drive.google.com/file/d/1RfhIGOfEU5IGx466CdsYGztb8Hs7ZGwP/view";
+export type DeveloperSkill = (typeof developerSkills)[number];
