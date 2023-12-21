@@ -6,15 +6,9 @@ const Contact: React.FC = () => {
   return (
     <section className="px-4 pt-[50px] pb-[80px] text-center flex flex-col gap-[25px] sm:flex-row sm:pt-0 sm:pb-16 sm:px-8 lg:px-[200px] xl:px-0 xl:mx-auto xl:max-w-[1128px]">
       <div className="relative inline-block sm:flex-1 w-fit sm:text-left mx-auto sm:mx-[unset]">
-        <Link
-          href={"/#contact"}
-          className="font-heading text-[32px] font-bold underline sm:text-left sm:font-default sm:text-[24px] md:text-[28px] lg:text-[30px] xl:text-[40px]"
-        >
-          Let's talk
-        </Link>
         <MotionDecoration
-          decorStyles="stroke-cream/50 mask-10-70-135deg w-[275px] h-[275px] sm:hidden"
-          motionStyles="absolute -right-[137px] -bottom-[115px]"
+          decorStyles="stroke-cream/50 mask-10-70-135deg w-[275px] h-[275px] sm:hidden pointer-events-none z-0"
+          motionStyles="absolute -right-[137px] -bottom-[115px] pointer-events-none"
           variant="asterisk"
           motionVariants={{
             initial: {
@@ -28,6 +22,12 @@ const Contact: React.FC = () => {
             },
           }}
         />
+        <Link
+          href={"/#contact"}
+          className="font-heading text-[32px] font-bold underline sm:text-left sm:font-default sm:text-[24px] md:text-[28px] lg:text-[30px] xl:text-[40px] z-10"
+        >
+          Let's talk
+        </Link>
       </div>
       <div className="flex w-full justify-center items-center gap-[25px] sm:w-fit">
         <a href="mailto:raihanramadhan.rn22@gmail.com" className="sm:hidden">

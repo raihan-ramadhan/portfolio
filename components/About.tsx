@@ -33,21 +33,12 @@ export default function About() {
                 </strong>
                 , and I also have basic proficiency in Back-End development.
               </p>
-              <p className="hidden lg:block">
-                My journey into web development started as a hobby during my
-                time at{" "}
-                <strong className="font-bold">
-                  Network Computer Engineering Vocational High School
-                </strong>
-                . After graduation, I turned my hobby into a{" "}
-                <span className="underline">serious pursuit</span> while working
-                at a supermarket.
-              </p>
+
               <p>
                 My core stack includes{" "}
                 <span className="font-bold">
-                  TypeScript, React, Next.js, Tailwind CSS, React Query,
-                  MongoDB, MySql, and Prisma.
+                  TypeScript, React, Next.js, Tailwind CSS, MongoDB, MySql,
+                  Redux, and Prisma.
                 </span>{" "}
                 I use <span className="font-bold">Figma</span> as the main tool
                 for designing UI/UX, while for graphic design I use{" "}

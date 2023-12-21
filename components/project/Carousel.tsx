@@ -1,77 +1,42 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { Carousel as ResponsiveCarousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import required modules
+import { Pagination } from "swiper/modules";
 
 interface CarouselProps {
   carouselItems: Array<{ label: string; url: string }>;
 }
 
 const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
-  // state for track current screen size
-  const [screenSize, setScreenSize] = useState<{
-    width: number;
-    height: number;
-  }>({
-    width: 0,
-    height: 0,
-  });
-
-  // function handler for track current screen size
-  const handleResize = () => {
-    setScreenSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-  };
-
-  // initial value for screenSize
-  useEffect(() => {
-    handleResize();
-  }, []);
-
-  // give window an eventListener for track current screen size
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <section className="w-full pl-4 sm:pl-8 md:px-6 lg:px-[200px] xl:px-0 xl:mx-auto xl:max-w-[1128px]">
-      <ResponsiveCarousel
-        showIndicators={false}
-        showStatus={false}
-        centerMode
-        centerSlidePercentage={75}
-        axis="horizontal"
-        showThumbs={false}
-        preventMovementUntilSwipeScrollTolerance
-        swipeScrollTolerance={50}
-        className="[&_ul_li]:pr-[10px] last:[&_ul_li]:pr-4 sm:[&_ul_li]:pr-[20px] sm:last:[&_ul_li]:pr-8 md:[&_ul_li]:pr-[40px] md:last:[&_ul_li]:pr-0 "
-        showArrows={screenSize.width >= 905}
-        emulateTouch
+    <section className="w-full xl:mx-auto xl:max-w-[1128px] md:!px-6 lg:!px-[200px] xl:!px-0 pb-[40px] lg:pb-[80px] xl:pb-[100px]">
+      <Swiper
+        loop
+        slidesPerView={"auto"}
+        grabCursor
+        pagination={{ clickable: true }}
+        spaceBetween={15}
+        modules={[Pagination]}
+        className={`!px-4 sm:!px-8 md:!px-0 [&_span.swiper-pagination-bullet-active]:bg-cream`}
       >
         {carouselItems.map(({ label, url }, index) => (
-          <div
-            key={index}
-            className={cn(
-              "flex flex-col w-full justify-between h-full gap-[5px] sm:gap-[15px] lg:text-[20px] "
-            )}
-          >
-            <div className="text-left font-bold md:text-[18px] xl:text-[26px]">
+          <SwiperSlide key={index} className="!w-10/12 space-y-2">
+            <div className="text-left font-bold h-12 md:text-[18px] xl:text-[26px] line-clamp-2">
               <span>{label}</span>
             </div>
-            <div className="aspect-video relative">
+            <div className="aspect-video relative align-bottom justify-end content-end">
               <Image className="w-full h-full" src={url} fill alt={label} />
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </ResponsiveCarousel>
+      </Swiper>
     </section>
   );
 };
