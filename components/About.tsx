@@ -4,9 +4,12 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
 import { Decoration } from "./Decoration";
+import SkillsList from "./SkillsList";
+import SkillsListMobile from "./SkillsListMobile";
+import { developerSkills, developerSkillsAboutMe } from "../lib/data";
 
 export default function About() {
-  const { ref } = useSectionInView("About");
+  const { ref } = useSectionInView("About-me");
 
   return (
     <div className="min-h-[calc(100vh_-_80px)] flex items-center relative overflow-hidden sm:min-h-[unset] xl:min-h-[calc(100vh_-_120px)] selection:bg-blue selection:text-black">
@@ -34,7 +37,7 @@ export default function About() {
                 , and I also have basic proficiency in Back-End development.
               </p>
 
-              <p>
+              {/* <p>
                 My core stack includes{" "}
                 <span className="font-bold">
                   TypeScript, React, Next.js, Tailwind CSS, MongoDB, MySql,
@@ -44,6 +47,12 @@ export default function About() {
                 for designing UI/UX, while for graphic design I use{" "}
                 <span className="font-bold">Adobe Photoshop</span> and{" "}
                 <span className="font-bold">Adobe Illustrator</span>.
+              </p> */}
+
+              <p className="inline-flex w-full flex-wrap gap-3 text-black font-medium text-sm justify-center">
+                {developerSkillsAboutMe.map((item) => (
+                  <span className="bg-cream/80 px-2 py-0.5">{item}</span>
+                ))}
               </p>
             </div>
           </div>

@@ -42,20 +42,19 @@ export default function Header() {
   }, []);
 
   return (
-    <header>
+    <header className="fixed z-[999] top-5 left-1/2 -translate-x-1/2">
       <nav>
         <ul
           className={cn(
-            "min-w-[360px] fixed z-[999] top-5 left-1/2 -translate-x-1/2 flex items-center justify-between p-[10px] rounded-full transition-all duration-400 lg:gap-[10px] bg-cream/90",
+            " flex  p-[10px] rounded-full transition-all duration-400 lg:gap-[10px] bg-cream/90",
             scrolled && "bg-black/40 backdrop-blur-sm"
           )}
         >
           {links.map((link) => (
-            <li className="relative" key={link.hash}>
+            <li className="relative shrink-0" key={link.hash}>
               <Link
                 className={cn(
-                  `flex w-full items-center justify-center transition rounded-full overflow-hidden text-black text-[14px] font-semibold px-[10px] py-[6px] 
-                   sm:text-[18px] sm:px-5`,
+                  `flex w-fit items-center justify-center transition rounded-full overflow-hidden text-black text-[14px] font-semibold px-[10px] py-[6px]  sm:text-[18px] sm:px-5 selection:bg-red-200 shrink-0 `,
                   scrolled && "text-cream"
                 )}
                 href={link.hash}

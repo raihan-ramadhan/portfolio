@@ -13,8 +13,8 @@ export default function Home() {
       <About />
       <MottoDivider />
       <Projects />
-      <Divider />
-      <Skills />
+      {/* <Divider /> */}
+      {/* <Skills /> */}
       <Divider />
       <Contact />
     </main>

@@ -119,7 +119,7 @@ export default function Projects() {
                 setCursorPosition={setCursorPosition}
               />
             ))}
-            <AnimatePresence>
+            {/* <AnimatePresence>
               {hoveredItem ? (
                 <motion.div
                   className={`absolute pointer-events-none !overflow-hidden -translate-x-1/2 -translate-y-1/2`}
@@ -159,7 +159,7 @@ export default function Projects() {
                   </div>
                 </motion.div>
               ) : null}
-            </AnimatePresence>
+            </AnimatePresence> */}
           </div>
         </div>
       </div>

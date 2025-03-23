@@ -4,16 +4,12 @@ export const links = [
     hash: "#home",
   },
   {
-    name: "About",
+    name: "About-me",
     hash: "#about",
   },
   {
     name: "Projects",
     hash: "#projects",
-  },
-  {
-    name: "Skills",
-    hash: "#skills",
   },
   {
     name: "Contact",
@@ -48,7 +44,7 @@ export const projectsData: ProjectsData = [
       "ODM using Mongoose for backend and MVC pattern with express as main framework for backend",
     ],
     tech: [
-      "React",
+      "React (Vite)",
       "Typescript",
       "Nivo Chart",
       "Material UI",
@@ -280,7 +276,7 @@ export const developerSkills = [
   "CSS",
   "Javascript",
   "Typescript",
-  "React",
+  "React (Vite)",
   "Next.js",
   "Node.js",
   "Express Js",
@@ -305,10 +301,34 @@ export const developerSkills = [
   "Socket.io",
   "Livekit",
   "Pusher",
+  "Shadcn",
+  "Supabase",
+  "Jest",
+  "React Testing Library",
+  "Cypress",
+  "Authentication",
+  "Figma",
+  "Adobe Photoshop",
 ] as const;
 
-export const designerSkills = ["Figma", "Adobe Photoshop", "Adobe Illustrator"];
+export const developerSkillsAboutMe: Array<DeveloperSkill> = [
+  "React (Vite)",
+  "Next.js",
+  "Typescript",
+  "Tailwind",
+  "Shadcn",
+  "Material UI",
+  "Jest",
+  "React Testing Library",
+  "Cypress",
+  "Atlas (Mongodb)",
+  "Supabase",
+  "Authentication",
+  "Figma",
+  "Adobe Photoshop",
+];
 
+export const designerSkills = ["Figma", "Adobe Photoshop", "Adobe Illustrator"];
 export type DesignerSkills = typeof designerSkills;
 export type DeveloperSkills = typeof developerSkills;
 export type DeveloperSkill = (typeof developerSkills)[number];

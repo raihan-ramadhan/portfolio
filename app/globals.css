@@ -43,3 +43,21 @@ html {
     opacity: 0.8;
   }
 }
+
+/* FOR SCROLL BAR STYLE */
+@layer base {
+  * {
+    scrollbar-width: thin; /* Firefox */
+  }
+  ::-webkit-scrollbar {
+    width: 6px; /* Chrome, Safari, Edge */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); /* Dark thumb for light mode */
+    border-radius: 4px;
+  }
+  /* Firefox */
+  html {
+    scrollbar-color: rgba(0, 0, 0, 0.2) unset;
+  }
+}

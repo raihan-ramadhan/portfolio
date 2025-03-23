@@ -68,12 +68,12 @@ export default function Intro() {
     >
       <div className="w-full min-h-[inherit] flex flex-col items-center justify-center text-center gap-[25px] py-[100px]">
         <motion.h1
-          className="text-[34px] font-bold font-heading text-black leading-tight sm:text-[60px] md:text-[72px] lg:text-[92px] xl:text-[120px]"
+          className="text-[34px] font-bold font-heading text-black leading-tight sm:text-[60px] md:text-[72px] lg:text-[88px] xl:text-[120px]"
           variants={variants1}
           initial="initial"
           whileInView="animate"
         >
-          Hi, I’m Raihan <br />A Developer <br />& Designer
+          Hi, I’m Raihan <br />A Frontend <br /> Developer
         </motion.h1>
         <motion.p
           className="text-[15px] font-normal max-w-[360px] sm:max-w-[450px] sm:text-[16px]] md:max-w-[600px] xl:text-[23px] xl:max-w-[736px] text-black leading-normal"
