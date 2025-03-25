@@ -58,7 +58,7 @@ export default function RootLayout({
       lang="en"
       className={`${SpaceMono.variable} ${UnboundedFont.variable} m-0 p-0`}
     >
-      <body className="relative font-default text-blue bg-black">
+      <body className="relative font-default text-blue bg-black max-w-8xl mx-auto">
         <Providers>
           <ActiveSectionContextProvider>
             {children}

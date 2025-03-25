@@ -328,7 +328,5 @@ export const developerSkillsAboutMe: Array<DeveloperSkill> = [
   "Adobe Photoshop",
 ];
 
-export const designerSkills = ["Figma", "Adobe Photoshop", "Adobe Illustrator"];
-export type DesignerSkills = typeof designerSkills;
 export type DeveloperSkills = typeof developerSkills;
 export type DeveloperSkill = (typeof developerSkills)[number];

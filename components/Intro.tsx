@@ -64,7 +64,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="relative min-h-screen w-full bg-cream overflow-hidden px-4 sm:px-8 lg:px-[200px] xl:px-[unset] selection:bg-black selection:text-cream"
+      className="relative min-h-[100dvh] w-full bg-cream overflow-hidden px-4 sm:px-8 lg:px-[200px] xl:px-[unset] selection:bg-black selection:text-cream"
     >
       <div className="w-full min-h-[inherit] flex flex-col items-center justify-center text-center gap-[25px] py-[100px]">
         <motion.h1

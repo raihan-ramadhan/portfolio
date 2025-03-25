@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import SectionHeading from "../SectionHeading";
-import { MotionDecoration } from "../Decoration";
+import { useState } from "react";
+import { cn } from "../../lib/utils";
 
 interface BannerProps {
   title: string;
@@ -9,36 +11,30 @@ interface BannerProps {
   link: string;
 }
 
-const Variants = {
-  initial: {
-    opacity: 0,
-    scale: 0.75,
-  },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.35, delay: 0.6 },
-  },
-};
-
 const Banner: React.FC<BannerProps> = ({
   title,
   imageUrl,
   imageUrlMobile,
   link,
 }) => {
-  return (
-    <section className="px-4 pt-20 flex flex-col w-full justify-center gap-[15px] sm:px-8 md:px-6 lg:px-[200px] xl:px-0 xl:mx-auto xl:max-w-[1128px] xl:pt-[100px]">
-      <SectionHeading className="text-center py-5">{title}</SectionHeading>
+  const [isLoading, setIsLoading] = useState(true);
 
+  return (
+    <section className="px-4 pt-10 flex flex-col w-full justify-center gap-[15px] sm:px-8 md:px-6 lg:px-[200px] xl:px-0 xl:mx-auto xl:max-w-[1128px]">
       {/* Image on mobile view */}
       <div className="relative aspect-square w-full rounded-[25px] overflow-hidden sm:hidden">
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+            {title}
+          </div>
+        )}
         <Image
           priority
           src={imageUrlMobile}
           fill
           alt={title}
-          className="w-full h-full"
+          className={cn(`w-full h-full`)}
+          onLoadingComplete={() => setIsLoading(false)}
         />
       </div>
 

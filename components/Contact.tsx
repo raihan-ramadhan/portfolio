@@ -97,25 +97,12 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
-              {/* <div className="flex w-full">
-              <div className="w-[200px] font-heading">Dribbble</div>
-              <div>
-                :{" "}
-                <a
-                  href="https://dribbble.com/raihan22"
-                  target="_blank"
-                  className="underline"
-                >
-                  dribbble.com/raihan22
-                </a>
-              </div>
-            </div> */}
             </div>
           </div>
 
           <form
             ref={formRef}
-            className="col-start-1 col-end-13 xl:col-start-1 xl:col-end-6 flex flex-col mx-auto gap-[10px] bg-cream p-5 rounded-[15px] max-w-[408px] h-[440px] xl:h-[520px] xl:max-w-[unset] w-full md:px-[30px] md:py-[20px] lg:px-[40px] lg:py-[30px] z-10 shrink"
+            className="col-start-1 col-end-13 xl:col-start-1 xl:col-end-6 flex flex-col mx-auto gap-[10px] bg-cream p-5 rounded-[15px] max-w-[408px] h-[340px] sm:h-[440px] xl:h-[520px] xl:max-w-[unset] w-full md:px-[30px] md:py-[20px] lg:px-[40px] lg:py-[30px] z-10 shrink"
             action={async (formData) => {
               const { data, error } = await sendEmail(formData);
 

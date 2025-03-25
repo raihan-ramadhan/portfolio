@@ -1,11 +1,10 @@
 import { MotionDecoration } from "@/components/Decoration";
-import Banner from "@/components/project/Banner";
-import Carousel from "@/components/project/Carousel";
-import Contact from "@/components/project/Contact";
-import Details from "@/components/project/Details";
-import Features from "@/components/project/Features";
-import Header from "@/components/project/Header";
-import Preview from "@/components/project/Preview";
+import Banner from "@/components/projects/Banner";
+import Carousel from "@/components/projects/Carousel";
+import Contact from "@/components/projects/Contact";
+import Details from "@/components/projects/Details";
+import Features from "@/components/projects/Features";
+import Header from "@/components/projects/Header";
 import { projectsData } from "@/lib/data";
 import { notFound } from "next/navigation";
 
@@ -54,8 +53,8 @@ const Page: React.FC<PageProps> = ({ params }) => {
   } = project;
 
   return (
-    <div className="flex-1 text-cream space-y-[15px] first-of-type:[&>section]:!mt-0 sm:space-y-[35px] lg:space-y-[50px] selection:text-black selection:bg-cream relative overflow-hidden">
-      <Header projectId={projectId} />
+    <div className="flex-1 text-cream selection:text-black selection:bg-cream relative overflow-hidden">
+      <Header projectId={projectId} title={title} />
       <Banner
         title={title}
         imageUrl={imageUrl}

@@ -15,8 +15,12 @@ const config: Config = {
       md: "905px",
       lg: "1240px",
       xl: "1440px",
+      "2xl": "1536px",
     },
     extend: {
+      maxWidth: {
+        "8xl": "1536px",
+      },
       fontFamily: {
         default: ["var(--space-mono)", ...defaultTheme.fontFamily.sans],
         heading: ["var(--unbounded)", ...defaultTheme.fontFamily.sans],

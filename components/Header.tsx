@@ -46,15 +46,16 @@ export default function Header() {
       <nav>
         <ul
           className={cn(
-            " flex  p-[10px] rounded-full transition-all duration-400 lg:gap-[10px] bg-cream/90",
+            "flex p-[10px] rounded-full w-max transition-all duration-400 lg:gap-[10px] bg-cream/90 relative shrink-0",
             scrolled && "bg-black/40 backdrop-blur-sm"
           )}
         >
+          {/* <div className="h-4 w-[500px] absolute left-1/2 -translate-x-1/2 bg-red-200"></div> */}
           {links.map((link) => (
-            <li className="relative shrink-0" key={link.hash}>
+            <li className="relative shrink-0 w-fit" key={link.hash}>
               <Link
                 className={cn(
-                  `flex w-fit items-center justify-center transition rounded-full overflow-hidden text-black text-[14px] font-semibold px-[10px] py-[6px]  sm:text-[18px] sm:px-5 selection:bg-red-200 shrink-0 `,
+                  `flex items-center justify-center transition rounded-full overflow-hidden text-black text-[14px] font-semibold px-[10px] py-[6px]  sm:text-[18px] sm:px-5 selection:bg-red-200 shrink-0 `,
                   scrolled && "text-cream"
                 )}
                 href={link.hash}
