@@ -27,7 +27,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Raihan Ramadhan | Portfolio",
   description:
-    "Raihan Ramadhan Portfolio | Full Stack Developer and Front-End Engineer | Expertise in Web Development",
+    "Raihan Ramadhan Portfolio | Full Stack Developer and Front-End Engineer | Expertise in Web Development | Front End Developer",
+  authors: [
+    { name: "Raihan Ramadhan", url: "https://raihan-ramadhan.vercel.app/" },
+  ],
   icons: [
     {
       rel: "icon",
@@ -45,6 +48,16 @@ export const metadata: Metadata = {
       rel: "apple-touch-icon",
       url: "/apple-touch-icon.png",
     },
+  ],
+  keywords: [
+    "Front End",
+    "Frontend",
+    "Front End Engineer",
+    "React Developer",
+    "Pekanbaru",
+    "Indonesia",
+    "Developer",
+    "Software Engineer",
   ],
 };
 
