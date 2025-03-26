@@ -4,7 +4,7 @@ import { Toaster } from "react-hot-toast";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Viewport } from "next";
-
+import AnimatedCursor from "../components/AnimatedCursor";
 import { Space_Mono, Unbounded } from "next/font/google";
 import Footer from "@/components/Footer";
 
@@ -74,6 +74,7 @@ export default function RootLayout({
       <body className="relative font-default text-blue bg-black max-w-8xl mx-auto">
         <Providers>
           <ActiveSectionContextProvider>
+            <AnimatedCursor />
             {children}
             <Toaster position="top-right" toastOptions={{ duration: 5000 }} />
           </ActiveSectionContextProvider>

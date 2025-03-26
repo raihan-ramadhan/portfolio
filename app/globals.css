@@ -48,6 +48,7 @@ html {
 @layer base {
   * {
     scrollbar-width: thin; /* Firefox */
+    cursor: none;
   }
   ::-webkit-scrollbar {
     width: 6px; /* Chrome, Safari, Edge */

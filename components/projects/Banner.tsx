@@ -34,7 +34,7 @@ const Banner: React.FC<BannerProps> = ({
           fill
           alt={title}
           className={cn(`w-full h-full`)}
-          onLoadingComplete={() => setIsLoading(false)}
+          onLoad={() => setIsLoading(false)}
         />
       </div>
 
