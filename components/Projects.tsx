@@ -32,9 +32,9 @@ export default function Projects() {
       </div>
       <Link
         href={"/projects"}
-        className="text-blue text-xl text-center col-start-1 col-end-[-1] sm:text-3xl mt-3 underline"
+        className="text-blue text-md text-center col-start-1 col-end-[-1] sm:text-2xl mt-2 mb-2 underline"
       >
-        MORE
+        View More Projects
       </Link>
     </section>
   );

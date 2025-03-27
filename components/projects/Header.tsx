@@ -49,7 +49,9 @@ const PrevNext = ({ projectId }: { projectId?: string }) => {
   return (
     <>
       {/* SEPARATOR */}
-      <div className="w-[1.5px] h-5 bg-cream" />
+      <li>
+        <div className="w-[1.5px] h-5 bg-cream" />
+      </li>
 
       <li className="min-h-5">
         <Link className={cn()} href={"/projects"}>
@@ -58,7 +60,9 @@ const PrevNext = ({ projectId }: { projectId?: string }) => {
       </li>
 
       {/* SEPARATOR */}
-      <div className="w-[1.5px] h-5 bg-cream" />
+      <li>
+        <div className="w-[1.5px] h-5 bg-cream" />
+      </li>
 
       <li className="min-h-5">
         <Link
@@ -74,7 +78,9 @@ const PrevNext = ({ projectId }: { projectId?: string }) => {
       </li>
 
       {/* SEPARATOR */}
-      <div className="w-[1.5px] h-5 bg-cream" />
+      <li>
+        <div className="w-[1.5px] h-5 bg-cream" />
+      </li>
 
       <li className="">
         <Link

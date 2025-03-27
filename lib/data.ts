@@ -22,6 +22,7 @@ type ProjectsData = Array<{
   year: string;
   title: string;
   features: Array<String>;
+  imageMetadata: string;
   tech: Array<DeveloperSkill>;
   imageUrl: any;
   imageUrlMobile: any;
@@ -43,6 +44,8 @@ export const projectsData: ProjectsData = [
       "Customizable screen setup",
       "Orientation toggle",
     ],
+    imageMetadata:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1743111137/portfolio/breakpoints_metadata_byvvzk.png",
     tech: ["React (Vite)", "Typescript", "Shadcn", "Tailwind"],
     imageUrl:
       "https://res.cloudinary.com/dloh9unzh/image/upload/v1743066235/portfolio/breakpoints-one.vercel.app__hpeeag.png",
@@ -76,6 +79,8 @@ export const projectsData: ProjectsData = [
       "State management with redux toolkit and query request with RTK query",
       "ODM using Mongoose for backend and MVC pattern with express as main framework for backend",
     ],
+    imageMetadata:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1743111214/portfolio/dashboardx_metadata_ecchfb.png",
     tech: [
       "React (Vite)",
       "Typescript",
@@ -124,6 +129,8 @@ export const projectsData: ProjectsData = [
       "Full responsivity in all screen and Light / Dark mode",
       "User authentication with Clerk, and database stored in Planetscale (MySQL).",
     ],
+    imageMetadata:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1702708091/portfolio/discord-banner.jpg",
     tech: [
       "Next.js",
       "Typescript",
@@ -178,6 +185,8 @@ export const projectsData: ProjectsData = [
       "Full responsivity in all screen and Light / Dark mode (depend on system)",
       "User authentication with Clerk, and documents data stored in mongoDB atlas.",
     ],
+    imageMetadata:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1743111386/portfolio/notion_metadata_tqpwty.png",
     tech: [
       "Next.js",
       "Typescript",
@@ -227,6 +236,8 @@ export const projectsData: ProjectsData = [
       "Full responsivity in all screen and beautiful design with tailwind and react components",
       "Google & Github authentication with Next-Auth, while all data users, properties and reservations is stored in mongoDB atlas",
     ],
+    imageMetadata:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1743111440/portfolio/airbnb_metadata_iexn9p.png",
     tech: [
       "Next.js",
       "Typescript",
@@ -270,6 +281,8 @@ export const projectsData: ProjectsData = [
       "Client form validation and handling using react-hook-form",
       "Google & Github authentication with Next-Auth, while all data users, properties and reservations is handled by mongoDB atlas",
     ],
+    imageMetadata:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1700835248/portfolio/messenger-banner.jpg",
     tech: [
       "Next.js",
       "Typescript",

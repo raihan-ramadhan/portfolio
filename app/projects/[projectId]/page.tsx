@@ -7,11 +7,21 @@ import Features from "@/components/projects/Features";
 import Header from "@/components/projects/Header";
 import { projectsData } from "@/lib/data";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+import { projectIdMetadata } from "../../../lib/metadata/projectIdMetadata";
 
 interface PageProps {
   params: {
     projectId: string;
   };
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { projectId: string };
+}): Promise<Metadata> {
+  return await projectIdMetadata({ params });
 }
 
 export async function generateStaticParams() {

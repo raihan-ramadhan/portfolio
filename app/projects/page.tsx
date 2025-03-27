@@ -2,6 +2,10 @@ import React from "react";
 import ProjectCard from "../../components/projects/ProjectCard";
 import { projectsData } from "../../lib/data";
 import Header from "../../components/projects/Header";
+import { Metadata } from "next";
+import { projectsMetadata } from "../../lib/metadata/porjectsMetadata";
+
+export const metadata: Metadata = projectsMetadata;
 
 const page = () => {
   return (
