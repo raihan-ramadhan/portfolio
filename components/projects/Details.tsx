@@ -1,5 +1,6 @@
 import { DeveloperSkill } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { Icons } from "../Icons";
 
 interface ProjectDetailProps {
   year: string;
@@ -22,8 +23,14 @@ const Details: React.FC<ProjectDetailProps> = ({ year, link, repo, tech }) => {
         const Value = () => {
           if (typeof currentValue == "string") {
             return key == "link" || key == "repo" ? (
-              <a href={currentValue} target="_blank" className="underline">
-                {currentValue.slice("https://".length)}
+              <a
+                href={currentValue}
+                target="_blank"
+                className="underline inline-flex items-center gap-1 lg:gap-3"
+                rel="noopener noreferrer"
+              >
+                {key == "repo" ? <span>Github</span> : <span>View</span>}
+                <Icons.openLink className="w-4 h-4 lg:w-6 lg:h-6 translate-y-0.5" />
               </a>
             ) : (
               <span>{currentValue}</span>

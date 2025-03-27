@@ -34,6 +34,39 @@ type ProjectsData = Array<{
 export const projectsData: ProjectsData = [
   {
     id: "0",
+    year: "2025",
+    title: "Breakpoints",
+    category: "Web App",
+    features: [
+      " Multi-screen breakpoint support",
+      "Zoom in/out functionality",
+      "Customizable screen setup",
+      "Orientation toggle",
+    ],
+    tech: ["React (Vite)", "Typescript", "Shadcn", "Tailwind"],
+    imageUrl:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1743066235/portfolio/breakpoints-one.vercel.app__hpeeag.png",
+    imageUrlMobile:
+      "https://res.cloudinary.com/dloh9unzh/image/upload/v1743034528/portfolio/breakpoints-one.vercel.app__1_ru0uk7.png",
+    url: "https://breakpoints-one.vercel.app",
+    repo: "https://github.com/raihan-ramadhan/breakpoints",
+    carouselItems: [
+      {
+        label: "Beautiful UI with Shadcn",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1743066235/portfolio/breakpoints-one.vercel.app__hpeeag.png",
+      },
+      {
+        label: "Full Responsive",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1743066035/portfolio/responsive_size_ayhbxr.jpg",
+      },
+      {
+        label: "Dark Mode",
+        url: "https://res.cloudinary.com/dloh9unzh/image/upload/v1743066346/portfolio/asasa_ssrfkn.png",
+      },
+    ],
+  },
+  {
+    id: "1",
     year: "2023",
     title: "DashboardX",
     category: "Web App",
@@ -78,7 +111,7 @@ export const projectsData: ProjectsData = [
     ],
   },
   {
-    id: "1",
+    id: "2",
     year: "2023",
     title: "Discord Clone",
     category: "Clone App",
@@ -134,7 +167,7 @@ export const projectsData: ProjectsData = [
     ],
   },
   {
-    id: "2",
+    id: "3",
     year: "2023",
     title: "Notion Clone",
     category: "Clone App",
@@ -182,7 +215,7 @@ export const projectsData: ProjectsData = [
     ],
   },
   {
-    id: "3",
+    id: "4",
     year: "2023",
     title: "Airbnb Clone",
     category: "Clone App",
@@ -226,7 +259,7 @@ export const projectsData: ProjectsData = [
     ],
   },
   {
-    id: "4",
+    id: "5",
     year: "2023",
     title: "Messenger Clone",
     category: "Clone App",

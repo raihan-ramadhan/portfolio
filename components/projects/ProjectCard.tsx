@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import { cn } from "../../lib/utils";
 import { useInView, motion } from "framer-motion";
+import { Icons } from "../Icons";
 
 const ProjectCard = ({
   id,
@@ -63,10 +64,14 @@ const ProjectCard = ({
           {title}
         </div>
       </Link>
-      <p className="text-sm justify-center w-full gap-5 flex sm:hidden">
+      <p className="text-sm justify-between w-full gap-5 flex sm:hidden px-3">
         <span>{title}</span>
-        <Link href={`/projects/${id}`}>
-          <span>Go to Project</span>
+        <Link
+          href={`/projects/${id}`}
+          className="inline-flex items-center gap-1"
+        >
+          <span>Go to Project</span>{" "}
+          <Icons.arrow className="w-3 h-3 fill-current" />
         </Link>
       </p>
     </div>
