@@ -26,6 +26,16 @@ const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
         modules={[Pagination]}
         className={`!px-4 sm:!px-8 md:!px-0 [&_span.swiper-pagination-bullet-active]:bg-cream`}
       >
+        <style>
+          {`
+        .swiper-pagination {
+            width: fit-content !important;
+            position: absolute !important;
+            left: 31.85% !important;
+            transform: translateX(50%) !important;
+          }
+        `}
+        </style>
         {carouselItems.map(({ label, url }, index) => (
           <SwiperSlide key={index} className="!w-10/12 space-y-2">
             <div className="text-left font-bold h-12 md:text-[18px] xl:text-[26px] line-clamp-2">
